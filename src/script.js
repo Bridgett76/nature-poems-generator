@@ -16,6 +16,10 @@ function generatePoem(event) {
     "You are a creative Poem expert and love to write short poems. Your mission is to make a 6 line poem and separate each line. Please make sure to follow the user in structions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `Generating a nature poem about ${topicInput.value}`;
+
   axios.get(apiUrl).then(displayPoem);
 }
 
