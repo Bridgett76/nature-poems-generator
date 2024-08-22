@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI Nature Poem Generator</title>
   </head>
@@ -22,10 +23,11 @@
             required
             autocomplete="off"
             class="topic"
+            id="user-topic"
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="poem" id="poem">The poem will go here</div>
+        <div class="poem" id="poem"></div>
       </main>
 
       <footer>
